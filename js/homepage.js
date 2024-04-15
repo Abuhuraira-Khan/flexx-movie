@@ -110,9 +110,6 @@ membershipBtn.addEventListener("click", ()=> {
 });
 
 
-console.log (searchBar)
-
-
 //----- start main section ------//
 
 
