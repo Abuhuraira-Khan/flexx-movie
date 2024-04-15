@@ -1,0 +1,654 @@
+@media only screen and (max-width: 450px) {
+    html body {
+       background-color: red ;
+       background-image: none;
+       width: 100%;
+     }
+
+     #nav-header{
+        width: 100%;
+        gap: 0;
+        display: flex;
+     }
+
+     #nav-header #header-logo h2{
+        margin-left:0 !important;
+        padding: 0px 5px;
+     }
+
+     #nav-header #membership-area  {
+        left:-35%;
+        
+     }
+     
+     #nav-header #search-area {
+        left: 45%;
+     }
+
+     #nav-header #search-area #search-inp{
+        display: none;
+     }
+
+    body #menu {
+        left: -100px;
+     }
+
+     body #main {
+        width: 100%;
+        left: 0;
+     }
+
+   }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: ROBOTO;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../assets/images/shang-chi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/*------ start website loader -----*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.film-reel {
+    border: 10px solid #ff3d00;
+    border-top: 10px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+}
+
+.film-strip {
+    background-color: #fff;
+    height: 8px;
+    width: 40px;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content {
+    /* Add your styling for the main content */
+    padding: 20px;
+}
+
+
+/*---- start header section -----*/
+#nav-header {
+    color: #fff;
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    fill: #bebebe;
+    z-index: 99;
+}
+
+#nav-header #header-logo h2 {
+    padding: 0px 10px;
+    display: inline-block;
+    color:#c71414;
+    letter-spacing: 1.5px;
+    margin-left: 20px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #c71414, 0 0 20px #c71414, 0 0 30px #c71414, 0 0 40px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #c71414, 0 0 30px #c71414, 0 0 40px #ff4da6, 0 0 50px #ff4da6;
+    }
+  }
+
+#search-area {
+    position: relative;
+    width: 350px;
+    height: 100%;
+    left: 60%;
+    display: flex;
+    gap: 42px;
+}
+
+#search-area  svg {
+    height: 25px;
+    width: 25px;
+}
+
+#search-inp {
+    position: relative;
+    width: 80%;
+}
+
+#search-inp > svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(-3%, -50%);
+    cursor: pointer;
+}
+
+#search-inp > input {
+    padding: 6px 35px 6px 10px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: medium;
+    visibility:hidden;
+}
+
+#search-bar-btn {
+
+}
+
+#search-bar-btn > svg{
+    width: 20px;
+    height: 20px;
+}
+
+#membership-area {
+    color: #bebebe;
+    position: relative;
+    left: 15%;
+    justify-content: center;
+}
+
+#membership-btn {
+    font-size:large;
+    padding:  2px 15px;
+    letter-spacing: 2px;
+    background-color: #c71414;
+    color: #bebebe;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#membership-btn:hover{
+    color: rgb(250, 250, 250);
+}
+
+
+#membership-package {
+    position: absolute;
+    top: -1000%;
+    right: -50px;
+    z-index: 99;
+    padding: 20px 10px;
+    width: 200px;
+    background-color:  rgba(7, 7, 7, 0.9);
+}
+
+.package-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    letter-spacing: 1px;
+    padding: 10px 2px 0px 2px;
+    border-bottom: 1px solid rgb(190, 190, 190, 70%);
+    cursor: pointer;
+}
+.package-item:hover{
+    background-color: #181616;
+}
+
+/*---- start sidebar section ----*/
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 6%;
+    fill: #bebebe;
+    position: fixed;
+    top: 20%;
+    text-align: center;
+}
+#menu div {
+    width: 100%;
+    height: 100%;
+    margin-left: -50px;
+    transition: .2s;
+}
+
+#menu div:hover{
+    scale: 1.1;
+}
+#menu div:hover span{
+    color: #c71414;
+}
+
+#menu div span {
+    font-size: 12px;
+    color: #bebebe;
+    letter-spacing: 1px;
+}
+
+#menu svg {
+    height: 25px;
+    width: 25px;
+}
+
+/*---- start main section ----*/
+#main {
+    width: 90%;
+    background-color: rgba(7, 7, 7, 90%);
+    position: relative;
+    left: 6%;
+    top: 10px;
+    box-sizing: border-box;
+}
+
+/*--- start main section > slider section ----*/
+#main-slider-sec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+/*--- start main section > slider section > big slider ----*/
+#slider-container {
+    position: relative;
+    width: 60%;
+    height: 80vh;
+    overflow: hidden;
+}
+#slider-container:hover #slide-left-btn{
+    animation: slideComingL .3s linear;
+    display: block;
+}
+@keyframes slideComingL {
+    from {
+        left:-50px ;
+    }
+    to{
+        left: 10px;
+    }
+}
+#slider-container:hover #slide-right-btn{
+    animation: slideComingR .3s ease ;
+    display: block;
+}
+@keyframes slideComingR {
+    from {
+        right:-50px;
+    }
+    to{
+        right: 10px;
+    }
+}
+
+#slider-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-big {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-big img {
+    width: 740px;
+    height: 100%;
+}
+
+#slide-left-btn {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    display: none;
+    font-size: 50px;
+    padding:  5px 10px;
+    color: cyan;
+    cursor:context-menu;
+    border-radius: 50%;
+    transition: .2s;
+}
+#slide-left-btn:hover{
+    background-color:rgb(190, 190, 190,30%);
+}
+
+#slide-right-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: none;
+    font-size: 50px;
+    padding:  5px 10px;
+    color: cyan;
+    cursor:context-menu;
+    border-radius: 50%;
+    transition: .2s;    
+}
+#slide-right-btn:hover{
+    background-color:rgb(190, 190, 190,30%);
+}
+
+/*--- start main section > slider section > popular section ----*/
+#popular-sec {
+    width: 36%;
+    height: 80vh;
+    padding:0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    color: #bebebe;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+#popular-title {
+    position: relative;
+    border-bottom: 1px solid rgb(190, 190, 190, 70%);
+    margin-top: 10px;
+    color: #bebebe;
+    width: 100%;
+    height: 33px;
+}
+
+#top-liked-movie {
+    position: relative;
+    width: 47%;
+    height: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#top-liked-movie-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-tlm {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slider-tlm img {
+    width: 208px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#top-watched-movie {
+    position: relative;
+    width: 47%;
+    height: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+#top-watched-movie-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-twm {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slider-twm img {
+    width: 208px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#coming-soon-movie {
+    position: relative;
+    width: 100%;
+    height: 45%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#coming-soon-movie-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-csm {
+    position: relative;
+    width: 442px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.slider-csm img {
+    width: 442px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*----- start main > movie section -----*/
+#movie-section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#movie-section .section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#movie-section .section .title {
+    padding: 5px;
+    border-bottom: 1px solid rgb(190, 190, 190, 70%);
+    color: #bebebe;
+}
+
+#movie-section .movie-container {
+    position: relative;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+#movie-section .movie-container:hover .movie-right-arrow {
+    display: block;
+    animation:movie-right-arrow-anime .3s ease ;
+}
+@keyframes movie-right-arrow-anime{
+    from{
+        right:-50px;
+    }
+    to{
+        right: 0;
+    }
+}
+#movie-section .movie-container:hover .movie-left-arrow {
+    display: block;
+    animation:movie-left-arrow-anime .3s ease ;
+}
+@keyframes movie-left-arrow-anime{
+    from{
+        left:-50px;
+    }
+    to{
+        left: 0;
+    }
+}
+
+.movie-container .vdo {
+    width: 285px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+}
+.movie-container .vdo .sub-vdo {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-container .vdo img {
+    width: 285px;
+    height: 340px;
+}
+
+.movie-container .vdo .vdo-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 80%);
+    text-align: center;
+    display: none;
+}
+
+.movie-container .vdo:hover .vdo-about {
+    display: block;
+}
+
+.movie-container .vdo .vdo-about .movie-name {
+    letter-spacing: .5px;
+    font-weight: 900;
+    color: #bebebe;
+}
+
+.movie-container .vdo .vdo-about span svg {
+    fill: #c71414;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50% );
+
+}
+
+/*---- movie left right slide arrow button ----*/
+#movie-section .section .movie-left-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:0px 10px 0px 3px;
+    font-size: 50px;
+    color: cyan;
+    cursor:context-menu;
+    height: 100%;
+    background:linear-gradient(to left, transparent, #666565e0, #666565ee, #666565fa) ;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+#movie-section .section .movie-right-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding:0px 3px 0px 10px;
+    font-size: 50px;
+    color: cyan;
+    height: 100%;
+    background:linear-gradient(to right, transparent, #666565e0, #666565ee,  #666565fa) ;
+    cursor:context-menu;
+    border: none;
+    outline: none;
+    display: none;
+}
+
+/*------ footer section ----- */
+#footer {
+    background-color: rgb(20, 20, 20,90%);
+    padding: 30px;
+    width:90%;
+    position: relative;
+    left: 6%;
+    top: 20px;
+}
+
+#footer #sub-footer {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    color: #bebebe;
+}
+
+#sub-footer .sub-footer-container {
+    width: 300px;
+}
+
+#sub-footer .sub-footer-container span {
+    margin-top: 10px;
+    display: block;    
+    cursor: pointer;
+}
+
+#sub-footer .sub-footer-container i svg {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#footer #last-footer {
+    font-weight: 700;
+    color: #bebebe;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+/* start meadia queries for mobile  */
+/* Styles for screens smaller than 600px wide */
+@media only screen and (max-width: 600px) {
+ html body {
+    background-color: red !important;
+  }
+}

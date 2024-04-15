@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #0e0d0d; */
+    background-image: url("../assets/images/shang-chi.jpg");
+    background-size: cover;
+    background-attachment: fixed;;
+}
+
+#go-to-top-arrow {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: rgb(199, 20, 20,85%);
+    box-shadow: 0px 0px 30px #c71414;
+    border-radius: 50%;
+    position: fixed;
+    right: 10%;
+    top: 80%;
+    z-index: 1000;
+}
+#go-to-top-arrow  svg {
+    width: 40px;
+    height: 40px;
+}
+
+#go-to-top-arrow:hover svg{
+    animation: go-to-top-arrow-anime 1.5s  infinite;
+}
+
+@keyframes go-to-top-arrow-anime {
+    0%{
+        margin-top: 0;
+    }
+    50%{
+        margin-top: -8px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+#header {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    gap: 30px;
+    color: #bebebe;
+    position: relative;
+}
+
+#header #back-btn {
+display: inline-block;
+width: 80px;
+}
+
+#header #back-btn svg {
+    width: 80px;
+    height: 30px;
+    fill: #c71414;
+    transition: .5s;
+}
+#header #back-btn svg:hover{
+    width: 90px;
+    letter-spacing: 10px;
+}
+
+
+#header #category-right-slide {
+    font-size: 25px;
+    height: 100%;
+    padding: 0px 2px 0px 5px;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    background:linear-gradient(to right, transparent, #666565b2, #666565d8, #666565fa) ;
+    display:flex;
+    align-items: center;
+    cursor: context-menu;
+    font-weight: 700;
+    color: cyan;
+    transition: .1s;
+    opacity: 0;
+}
+#header #category-right-slide:hover {
+background: gray;
+}
+
+#header #category-left-slide {
+    font-size: 25px;
+    height: 100%;
+    padding:0px 5px 0px 2px;
+    justify-content: center;
+    position: absolute;
+    left: 95px;
+    background:linear-gradient(to left, transparent, #666565b2, #666565d8, #666565fa) ;
+    display:flex;
+    align-items: center;
+    cursor: context-menu;
+    font-weight: 700;
+    color: cyan;
+    transition: .1s;
+    opacity: 0;
+}
+#header #category-left-slide:hover {
+    background: gray;
+}
+
+#header #category {
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    padding: 0px 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#header #category .category-item {
+    border: 1px solid gray;
+    padding: 0px 10px;
+    border-radius: 30px;
+    position: relative;
+    cursor: context-menu;
+}
+#header #category .category-item:hover {
+    color: #c71414;
+}
+
+/*--- start main section ---*/
+#main {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    background-color: rgb(0, 0, 0,90%);
+    padding: 10px;
+}
+
+#movie-container {
+    width: 100%;
+    height: 100%;
+    color: #bebebe;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+#movie-container .vdo{
+    width: 19.2% !important;
+    height: 300px;
+    background-color: green;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#movie-container .vdo .sub-vdo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#movie-container .vdo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#movie-container .vdo .vdo-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 80%);
+    text-align: center;
+    display: none;
+}
+
+#movie-container .vdo .vdo-about .movie-name {
+    letter-spacing: .5px;
+    font-weight: 900;
+    color: #bebebe;
+}
+
+#movie-container .vdo .vdo-about span svg {
+    fill: #c71414;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50% );
+}
